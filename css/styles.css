@@ -1,0 +1,14 @@
+h1 {
+    font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+    font-size: 45px;
+}
+
+h1 img {
+    vertical-align: bottom;
+    padding-top: 10px;
+}
+
+.shadow {
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
