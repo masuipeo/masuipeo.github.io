@@ -9,12 +9,6 @@ function countChars(ele) {
     document.getElementById("count").innerText = "文字数: " + ele.value.length + ", バイト数： " + ele.value.bytes();
 }
 
-$.get("http://weather.livedoor.com/forecast/webservice/json/v1?city=400040",
-    function(dt){
-        console.log(dt);
-    }
-);
-
 //デフォルトの図書館ID(sysytemid)
 var systemid_list = ['Tokyo_Chofu'];
 var isbn_list = [
