@@ -38,59 +38,8 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="js/lib.js"></script>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
         <script type="text/javascript" src="https://calil.jp/public/js/calilapi.js"></script>
-        <script type="text/javascript">
-            //デフォルトの図書館ID(sysytemid)
-            var systemid_list = ['Tokyo_Setagaya'];
-            var isbn_list = ['4798141771', '479814245X', '4802610335', '4798148563', '4802611080', '4798153613', '4798157201', '480261179X', '4297105144', '4798160016'];
-            //市町村選択時に実行される関数
-            function on_select_city(systemid, pref){
-                systemid_list = systemid;
-                log(systemid_list);
-                //選択市町村の表示
-                $('#pref').show();
-                $('#pref_name').html(pref);
-                apishow();
-            }
-            var city_selector = {};
-            $(function(){
-                //市町村選択ダイアログ
-                city_selector = new CalilCitySelectDlg({
-                    'appkey' : 'faf189d7e5379382ec450a34f9240912',
-                    'select_func' : on_select_city
-                });
-                apishow();
-                //ISBNリスト選択時
-                // $('#isbn_list').change(apishow);
-            });
-            //図書館APIの検索結果の表示
-            function apishow(){
-                // var isbn_list = $('#isbn_list').val().split(',');
-                $('#calil_booklist').html('');
-                $(isbn_list).each(function(i, isbn){
-                    //Amazonの書影
-                    var thumbnail = '<a href="http://www.amazon.co.jp/exec/obidos/ASIN/' + isbn + '" target="_blank"><img border="0" src="https://images-na.ssl-images-amazon.com/images/P/' + isbn +'.09.MZZZZZZ.jpg" style="" alt="" onload="if(this.width==\'1\') this.src=\'/public/img/no-image/middle.gif\'"></a>';
-                    //検索結果表示場所の追加
-                    $('#calil_booklist').append('<div class="calil_book">'+ thumbnail + '<div id="'+isbn+'"></div></div>');
-                });
-                //検索表示用のインスタンス作成
-                var calil = new Calil({
-                    'appkey' : 'faf189d7e5379382ec450a34f9240912',
-                    'render': new CalilRender(),
-                    'isbn' : isbn_list,
-                    'systemid' : systemid_list
-                });
-                //検索結果の表示 結果は↑で生成した<div id="isbn"></div>に描画されます
-                calil.search();
-            }
-            //デバッグ用関数
-            function log(text){
-                try{
-                    console.log(text);
-                }catch( e ){}
-            }
-        </script>
+        <script type="text/javascript" src="js/lib.js"></script>
     </body>
 </html>
