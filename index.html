@@ -33,12 +33,6 @@
                     <strong id="pref_name">東京都世田谷区</strong>
                     <span id="lib_select" style="font-size: 85%;"> (<a href="javascript:city_selector.showDlg();">図書館を変更する</a>)</span>
                 </div>
-                <!-- ISBNリスト -->
-                <h4>isbn list:</h4>
-                <select name="" id="isbn_list">
-                    <option value="4047916234,4103534222,4103534230,4103534257" selected>4047916234,4103534222,4103534230,4103534257</option>
-                    <option value="4088700104,4334926940">4088700104,4334926940</option>
-                </select>
                 <!-- 結果の表示 -->
                 <div id="calil_booklist" class="clearfix">
                 </div>
@@ -50,6 +44,7 @@
         <script type="text/javascript">
             //デフォルトの図書館ID(sysytemid)
             var systemid_list = ['Tokyo_Setagaya'];
+            var isbn_list = ['4798141771', '479814245X', '4802610335', '4798148563', '4802611080', '4798153613', '4798157201', '480261179X', '4297105144', '4798160016'];
             //市町村選択時に実行される関数
             function on_select_city(systemid, pref){
                 systemid_list = systemid;
@@ -68,11 +63,11 @@
                 });
                 apishow();
                 //ISBNリスト選択時
-                $('#isbn_list').change(apishow);
+                // $('#isbn_list').change(apishow);
             });
             //図書館APIの検索結果の表示
             function apishow(){
-                var isbn_list = $('#isbn_list').val().split(',');
+                // var isbn_list = $('#isbn_list').val().split(',');
                 $('#calil_booklist').html('');
                 $(isbn_list).each(function(i, isbn){
                     //Amazonの書影
