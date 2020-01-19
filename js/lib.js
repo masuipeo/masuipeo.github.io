@@ -9,6 +9,18 @@ function countChars(ele) {
     document.getElementById("count").innerText = "文字数: " + ele.value.length + ", バイト数： " + ele.value.bytes();
 }
 
+function ime(ele) {
+    url = "http://www.google.com/transliterate?langpair=ja-Hira|ja&text=";
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', encodeURI(url + ele.value));
+    xhr.send();
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("ime_result").innerText = xhr.responseText;
+        }
+    }
+}
+
 //デフォルトの図書館ID(sysytemid)
 var systemid_list = ['Tokyo_Chofu'];
 var isbn_list = [
