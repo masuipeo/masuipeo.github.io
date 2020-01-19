@@ -10,7 +10,7 @@ function countChars(ele) {
 }
 
 function ime(ele) {
-    url = "http://www.google.com/transliterate?langpair=ja-Hira|ja&text=";
+    url = "https://www.google.com/transliterate?langpair=ja-Hira|ja&text=";
     var xhr = new XMLHttpRequest();
     xhr.open('GET', encodeURI(url + ele.value));
     xhr.send();
