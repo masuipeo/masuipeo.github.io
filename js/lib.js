@@ -19,7 +19,9 @@ function ime(ele) {
             let result = JSON.parse(xhr.responseText);
             let ime = "";
             for (let i of result) {
-                ime += i[0];
+                if ((i.length > 0) && (i[1].length > 0)) {
+                    ime += i[1][0];
+                }
             }
             document.getElementById("ime").innerText = ime;
             document.getElementById("ime_result").innerText = JSON.stringify(result, null, 2);
