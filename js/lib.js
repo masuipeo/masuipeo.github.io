@@ -16,7 +16,13 @@ function ime(ele) {
     xhr.send();
     xhr.onreadystatechange = function() {
         if(xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById("ime_result").innerText = JSON.stringify(JSON.parse(xhr.responseText), null, 4);
+            let result = JSON.parse(xhr.responseText);
+            let ime = "";
+            for (let i of result) {
+                ime += i[0];
+            }
+            document.getElementById("ime").innerText = ime;
+            document.getElementById("ime_result").innerText = JSON.stringify(result, null, 2);
         }
     }
 }
