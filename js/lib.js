@@ -13,9 +13,11 @@ function ime(ele) {
     url = "https://www.google.com/transliterate?langpair=ja-Hira|ja&text=";
     var xhr = new XMLHttpRequest();
     xhr.open('GET', encodeURI(url + ele.value));
+    window.alert(encodeURI(url + ele.value));
     xhr.send();
     xhr.onreadystatechange = function() {
         if(xhr.readyState === 4 && xhr.status === 200) {
+            window.alert("ok");
             document.getElementById("ime_result").innerText = xhr.responseText;
         }
     }
