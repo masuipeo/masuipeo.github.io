@@ -29,6 +29,10 @@ function ime(ele) {
     }
 }
 
+function bookmarklet(ele) {
+    document.getElementById("bookmarklet").href = ele.value;
+}
+
 //デフォルトの図書館ID(sysytemid)
 var systemid_list = ['Tokyo_Chofu'];
 var isbn_list = [

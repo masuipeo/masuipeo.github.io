@@ -16,10 +16,15 @@
         <div class="container">
             <h1><img src="images/logo.png" alt="増井技術士事務所" width="60" /> 増井技術士事務所</h1>
             <div class="row">
-                <div class="six columns">
+                <div class="three columns">
                     <h2>テキスト</h2>
                     <textarea class="u-full-width" onkeydown="countChars(this)" onchange="countChars(this)"></textarea>
                     <div id="count"></div>
+                </div>
+                <div class="three columns">
+                    <h2>ブックマークレット</h2>
+                    <input type="text" onchange="bookmarklet(this)">
+                    <div><a href="" id="bookmarklet" onclick="return false" data-role="button">ブックマークバーにD&D</a></div>
                 </div>
                 <div class="three columns">
                     <h2>変換候補</h2>
@@ -48,6 +53,6 @@
         </div>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://calil.jp/public/js/calilapi.js"></script>
-        <script type="text/javascript" src="js/lib.js?date=20200119_6"></script>
+        <script type="text/javascript" src="js/lib.js?date=20200122"></script>
     </body>
 </html>
