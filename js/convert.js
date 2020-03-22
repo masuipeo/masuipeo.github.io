@@ -21,8 +21,10 @@ function scrapbox() {
     obj.pages = [];
     for (var i = 0; i < div.getElementsByTagName("A").length; i++){
         var link = div.getElementsByTagName("A")[i];
-        var dd = div.getElementsByTagName("DD")[i];
-        var lines = [link.innerText, dd.innerText.trim(), link.getAttribute("HREF")];
+        var lines = [link.innerText];
+        var dd = div.getElementsByTagName("DD");
+        dd[i].innerText.split("\n").forEach(i => lines.push(i.trim()));
+        lines.push(link.getAttribute("HREF"));
         var tags = link.getAttribute("TAGS");
         if (tags){
             lines.push("");
