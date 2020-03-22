@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ツール" />
+    <meta name="author" content="masuipeo" />
+    <title>はてなブックマークからScrapboxに変換</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/icon" href="images/favicon.ico" />
+</head>
+<body>
+    <div class="container">
+        <h1>はてなブックマークからScrapboxに変換</h1>
+        <div>
+            はてなブックマークで設定したコメントとタグを、URLとともにScrapboxのページに変換するスクリプト。
+        </div>
+        <hr>
+        <form>
+            <input type="file" id="selfile"><br>
+            <textarea class="u-full-width" id="bookmark" readonly></textarea>
+            <a href="#" id="download" download="scrapbox.json" onclick="scrapbox()">ScrapboxのJSON形式に変換</a>
+        </form>
+        <hr>
+        <div>
+            <h2>使い方</h2>
+            <ol>
+                <li>はてなブックマークの<a href="https://b.hatena.ne.jp/-/my/config/data_management" target="_blank" rel="nofollow">データ管理</a>から「エクスポート」の「ブックマーク形式」を押してダウンロードする。</li>
+                <li>上記の「ファイルを選択」ボタンを押し、ダウンロードしたファイルを選択する。</li>
+                <li>上記の「ScrapboxのJSON形式に変換」を押す。</li>
+                <li>Scrapboxの「settings」→「Page Data」→「Import Pages」でファイルを選択し、インポートする。</li>
+            </ol>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/convert.js?date=20200322"></script>
+</body>
+</html>
