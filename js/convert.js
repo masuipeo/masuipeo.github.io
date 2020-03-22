@@ -22,7 +22,7 @@ function scrapbox() {
     for (var i = 0; i < div.getElementsByTagName("A").length; i++){
         var link = div.getElementsByTagName("A")[i];
         var dd = div.getElementsByTagName("DD")[i];
-        var lines = [link.innerText, dd.innerText, link.getAttribute("HREF")];
+        var lines = [link.innerText, dd.innerText.trim(), link.getAttribute("HREF")];
         var tags = link.getAttribute("TAGS");
         if (tags){
             lines.push("");
