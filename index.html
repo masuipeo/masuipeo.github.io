@@ -15,33 +15,7 @@
     <body>
         <div class="container">
             <h1><img src="images/logo.png" alt="増井技術士事務所" width="60" /> 増井技術士事務所</h1>
-            <div class="row">
-                <div class="three columns">
-                    <h2>テキスト</h2>
-                    <textarea class="u-full-width" onkeydown="countChars(this)" onchange="countChars(this)"></textarea>
-                    <div id="count"></div>
-                </div>
-                <div class="three columns">
-                    <h2>ブックマークレット</h2>
-                    <input type="text" onchange="bookmarklet(this)" value="javascript:">
-                    <div><a href="" id="bookmarklet" onclick="return false" data-role="button">ブックマークバーにD&D</a></div>
-                </div>
-                <div class="three columns">
-                    <h2>変換候補</h2>
-                    <input type="text" onchange="ime(this)">
-                    <div id="ime"></div>
-                    <pre id="ime_result"></pre>
-                </div>
-                <div class="three columns">
-                    <h2>リンク</h2>
-                    <a href="book.html">書籍一覧</a>
-                </div>
-            </div>
-            <hr>
-            <div>
-                <a href="convert.html">はてなブックマークからScrapboxに変換</a>
-            </div>
-            <hr>
+            <h2>個人的便利ツール</h2>
             <h2>図書館情報取得</h2>
             <div id="content">
                 <!-- 市町村選択 -->
@@ -52,6 +26,30 @@
                 </div>
                 <!-- 結果の表示 -->
                 <div id="calil_booklist" class="clearfix">
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="three columns">
+                    <h2>テキストカウント</h2>
+                    <textarea class="u-full-width" onkeydown="countChars(this)" onchange="countChars(this)"></textarea>
+                    <div id="count"></div>
+                </div>
+                <div class="three columns">
+                    <h2>ブックマークレット</h2>
+                    <input type="text" onchange="bookmarklet(this)" value="javascript:">
+                    <div><a href="" id="bookmarklet" onclick="return false" data-role="button">ブックマークバーにD&D</a></div>
+                </div>
+                <div class="three columns">
+                    <h2>GoogleIME変換候補</h2>
+                    <input type="text" onchange="ime(this)">
+                    <div id="ime"></div>
+                    <pre id="ime_result"></pre>
+                </div>
+                <div class="three columns">
+                    <h2>リンク</h2>
+                    <a href="book.html">書籍一覧</a>
+                    <a href="convert.html">はてなブックマークからScrapboxに変換</a>
                 </div>
             </div>
         </div>
