@@ -1,0 +1,73 @@
+BEGIN:VCALENDAR
+PRODID:livedoor weather - iCal weather
+VERSION:2.0
+METHOD:PUBLISH
+CALSCALE:GREGORIAN
+X-WR-CALNAME:東京の天気 - livedoor weather
+X-WR-CALDESC:livedoor 天気情報が配信する iCal フォーマットでの今日明日・週間の天気予報
+X-WR-TIMEZONE:Asia/Tokyo
+BEGIN:VEVENT
+UID:livedoor-weather/forecast/ical/13/63/2020-07-21
+DESCRIPTION:http://weather.livedoor.com/area/forecast/130010?r=ical20200721 [ 東京 ] 21日の天気は曇り、最高気温は29℃ 最低気温は23℃でしょう。
+DTSTART:20200721
+DTEND:20200722
+SUMMARY:曇り 29℃/23℃
+END:VEVENT
+BEGIN:VEVENT
+UID:livedoor-weather/forecast/ical/13/63/2020-07-22
+DESCRIPTION:http://weather.livedoor.com/area/forecast/130010?r=ical20200722 [ 東京 ] 22日の天気は曇のち雨、最高気温は27℃ 最低気温は23℃でしょう。
+DTSTART:20200722
+DTEND:20200723
+SUMMARY:曇のち雨 27℃/23℃
+END:VEVENT
+BEGIN:VEVENT
+UID:livedoor-weather/forecast/ical/13/63/2020-07-23
+DESCRIPTION:http://weather.livedoor.com/area/forecast/130010?r=ical20200723 [ 東京 ] 23日の天気は雨、最高気温は25.2℃ 最低気温は22.4℃でしょう。
+DTSTART:20200723
+DTEND:20200724
+SUMMARY:雨 25.2℃/22.4℃
+END:VEVENT
+BEGIN:VEVENT
+UID:livedoor-weather/forecast/ical/13/63/2020-07-24
+DESCRIPTION:http://weather.livedoor.com/area/forecast/130010?r=ical20200724 [ 東京 ] 24日の天気は曇時々雨、最高気温は28.2℃ 最低気温は20.5℃でしょう。
+DTSTART:20200724
+DTEND:20200725
+SUMMARY:曇時々雨 28.2℃/20.5℃
+END:VEVENT
+BEGIN:VEVENT
+UID:livedoor-weather/forecast/ical/13/63/2020-07-25
+DESCRIPTION:http://weather.livedoor.com/area/forecast/130010?r=ical20200725 [ 東京 ] 25日の天気は曇時々雨、最高気温は30.2℃ 最低気温は24.7℃でしょう。
+DTSTART:20200725
+DTEND:20200726
+SUMMARY:曇時々雨 30.2℃/24.7℃
+END:VEVENT
+BEGIN:VEVENT
+UID:livedoor-weather/forecast/ical/13/63/2020-07-26
+DESCRIPTION:http://weather.livedoor.com/area/forecast/130010?r=ical20200726 [ 東京 ] 26日の天気は曇り、最高気温は29.8℃ 最低気温は25.2℃でしょう。
+DTSTART:20200726
+DTEND:20200727
+SUMMARY:曇り 29.8℃/25.2℃
+END:VEVENT
+BEGIN:VEVENT
+UID:livedoor-weather/forecast/ical/13/63/2020-07-27
+DESCRIPTION:http://weather.livedoor.com/area/forecast/130010?r=ical20200727 [ 東京 ] 27日の天気は雨、最高気温は29.2℃ 最低気温は25.8℃でしょう。
+DTSTART:20200727
+DTEND:20200728
+SUMMARY:雨 29.2℃/25.8℃
+END:VEVENT
+BEGIN:VEVENT
+UID:livedoor-weather/forecast/ical/13/63/2020-07-28
+DESCRIPTION:http://weather.livedoor.com/area/forecast/130010?r=ical20200728 [ 東京 ] 28日の天気は雨のち曇、最高気温は27.1℃ 最低気温は22.8℃でしょう。
+DTSTART:20200728
+DTEND:20200729
+SUMMARY:雨のち曇 27.1℃/22.8℃
+END:VEVENT
+BEGIN:VTIMEZONE
+TZID:Asia/Tokyo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+END:STANDARD
+END:VTIMEZONE
+END:VCALENDAR
